@@ -10,7 +10,7 @@ import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 @Configuration
 public class MapperConfig {
 
-	@Bean(name = "userObjectMapper")
+	@Bean(name = "adminObjectMapper")
 	public ObjectMapper setObjectMapper() {
 		ObjectMapper mapper = new ObjectMapper();
 		mapper.setPropertyNamingStrategy(PropertyNamingStrategy.KEBAB_CASE);
