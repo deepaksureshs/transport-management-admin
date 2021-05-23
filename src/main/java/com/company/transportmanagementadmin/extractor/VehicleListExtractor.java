@@ -23,8 +23,8 @@ public class VehicleListExtractor implements ResultSetExtractor<List<Vehicle>> {
 			vehicle.setVehicleType(rs.getString("vehicle_type"));
 			vehicle.setCapacity(rs.getInt("capacity"));
 			vehicle.setHealthStatus(rs.getString("health_status"));
-			vehicle.setCreatedDate(rs.getString("created_date"));
-			vehicle.setUpdatedDate(rs.getString("updated_date"));
+			vehicle.setCreatedDate(rs.getTimestamp("created_date").toString());
+			vehicle.setUpdatedDate(rs.getTimestamp("updated_date").toString());
 			vehicleList.add(vehicle);
 		}
 		return vehicleList;

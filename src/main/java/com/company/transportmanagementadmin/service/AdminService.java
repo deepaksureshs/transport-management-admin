@@ -49,8 +49,8 @@ public class AdminService {
 			LOGGER.error("Exception :: Invalid route-date recived " + e);
 			throw new Exception("Invalid route-date recived");
 		} catch (NullPointerException exception) {
-			LOGGER.error("Exception :: route id,vehicle id or route_date is missing ");
-			throw new Exception("Exception :: route id,vehicle id or route_date is missing ");
+			LOGGER.error("Exception :: [route id, vehicle id, route_date] are mandatory ");
+			throw new Exception("Exception :: [route id, vehicle id, route_date] are mandatory");
 		}
 
 	}
@@ -64,8 +64,8 @@ public class AdminService {
 			LOGGER.error("Exception ::  Invalid route-date recived " + exception);
 			throw new Exception("Invalid route-date recived");
 		} catch (NullPointerException exception) {
-			LOGGER.error("Exception :: route id,vehicle id or route_date is missing " + exception);
-			throw new Exception("route id,vehicle id or route_date is missing ");
+			LOGGER.error("Exception :: [route id, vehicle id, route_date, ticket details] are mandatory  " + exception);
+			throw new Exception("[route id, vehicle id, route_date, ticket details] are mandatory  ");
 		} catch (Exception exception) {
 			LOGGER.error("Exception " + exception);
 			throw new Exception(exception);
@@ -83,8 +83,8 @@ public class AdminService {
 			LOGGER.error("Exception Invalid route-date recived " + e);
 			throw new Exception("Invalid route-date recived");
 		} catch (NullPointerException exception) {
-			LOGGER.error("Exception route id,vehicle id or route_date is missing ");
-			throw new Exception("Exception route id,vehicle id or route_date is missing ");
+			LOGGER.error("Exception :: [route id, vehicle id, route_date] are mandatory ");
+			throw new Exception("Exception :: [route id, vehicle id, route_date] are mandatory ");
 		} catch (Exception exception) {
 			LOGGER.error("Exception " + exception);
 			throw new Exception("Exception " + exception);
